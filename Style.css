@@ -98,3 +98,26 @@ background-color: #888888;
     width: 66px;
     background-color: #7A91A7;
 }
+
+
+/* Slider */
+.slider {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    background-color: rgb(0, 0, 0);
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid black;
+    z-index: 1;
+    display: none;
+  }
+
+  .slider.show {
+    display: flex;
+  }

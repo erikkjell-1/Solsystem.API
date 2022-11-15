@@ -1,5 +1,7 @@
 const BASE_URL = 'https://fathomless-shelf-54969.herokuapp.com';
-// API nyckel att använda ifall man enbart siktar på godkänt: solaris-vKkkQHqQboi7c6JF
+const slider = document.querySelector('.slider');
+const planet_info = document.querySelector('.planet_info_text');
+let sun = document.getElementById('sun');
 
 
 // async function getKey() {
@@ -17,6 +19,18 @@ async function getPlanets() {
     const data = await response.json();
     console.log(data);
 }
-
 // getKey();
 getPlanets();
+
+sun.addEventListener('click', async function(){
+    let planets = await getPlanets();
+    planet_info.innerText = '';
+
+    toggleSlider();
+});
+
+
+
+function toggleSlider() {
+    slider.classList.toggle("show");
+  }
