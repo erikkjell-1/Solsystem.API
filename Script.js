@@ -1,7 +1,7 @@
 const BASE_URL = 'https://fathomless-shelf-54969.herokuapp.com';
 const slider = document.querySelector('.slider');
 const planet_info = document.querySelector('.planet_info_text');
-let sun = document.getElementById('sun');
+let sun = document.getElementById('.sun');
 
 
 // async function getKey() {
@@ -22,11 +22,9 @@ async function getPlanets() {
 // getKey();
 getPlanets();
 
-sun.addEventListener('click', async function(){
-    let planets = await getPlanets();
-    planet_info.innerText = '';
-
+sun.addEventListener('click', (event) => {
     toggleSlider();
+    getSun();
 });
 
 
