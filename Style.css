@@ -15,7 +15,7 @@ h2 {
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     position: relative;
     display: right;
-    color: #FFD029;
+    color: #ffffff;
 }
 
 .solar-system {
@@ -24,9 +24,7 @@ h2 {
     align-items: center;
     justify-content: flex-start;
     gap: 5rem;
-
-}
-.solar-system button {
+    list-style: none;
     border: none;
     cursor: pointer;
 }
