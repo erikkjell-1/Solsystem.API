@@ -10,6 +10,8 @@ async function getKey() {
 
 getKey();
 
+// få den hämtade nyckeln in i funktionen under
+
 async function getPlanets() {
     const response = await fetch(`${BASE_URL}/bodies`, {
         headers: {
@@ -20,9 +22,9 @@ async function getPlanets() {
     console.log(data);
 }
 
-getKey();
 getPlanets();   
 
+// Sedan koppla varsin planet med en eventlistener som printar ut information i overlay
 
 //    function on() {
 //      document.getElementById("overlay").style.display = "block";
