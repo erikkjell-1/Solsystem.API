@@ -22,8 +22,7 @@ h2 {
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: flex-start;
-    gap: 5rem;
+    justify-content: space-between;
     list-style: none;
     border: none;
     cursor: pointer;
@@ -81,6 +80,17 @@ background-color: #888888;
     height: 144px;
     width: 144px;
     background-color: #C7AA72;
+}
+
+.saturn-ring {
+    width: 20;
+    height: 145;
+    border: solid 50px wheat;
+    border-radius: 80%;
+    top: -95px;
+    position: absolute;
+    left: -100px;
+    transform: rotate3d(1,0,0,75deg);
 }
 
 .neptun {
