@@ -15,9 +15,9 @@ body{
 
 #solar-system {
     display: flex;
-    flex-direction: row;
+    flex: auto;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: space-around;
 }
 
 #solar-system:hover {
@@ -75,14 +75,14 @@ background-color: #888888;
     background-color: #C7AA72;
 }
 
-.neptun {
+.uranus {
     border-radius: 50%;
     height: 66px;
     width: 66px;
     background-color: #C9D4F1;
 }
 
-.pluto{
+.neptune{
     border-radius: 50%;
     height: 66px;
     width: 66px;
