@@ -9,19 +9,21 @@
 </head>
 <body>
     
-    <main id="planets">
-        <article id="sun"></article>
-        <article id="mercury"></article>
-        <article id="venus"></article>
-        <article id="earth"></article>
-        <article id="mars"></article>
-        <article id="jupiter"></article>
-        <article id="saturn"><aside id="saturn-circle"></aside></article>
-        <article id="uranus"></article>
-        <article id="neptune"></article>
+    <main id="solar-system">
+        <article class="sun"></article>
+        <article class="mercury"></article>
+        <article class="venus"></article>
+
+        <article class="earth"></article>
+        <article class="mars"></article>
+        <article class="jupiter"></article>
+
+        <article class="saturn"><aside id="saturn-circle"></aside></article>
+        <article class="uranus"></article>
+        <article class="neptune"></article>
       </main>
       
-      <section id="slider">
+      <section id="overlay">
         <content>
           <h2></h2>
           <h3></h3>
@@ -43,10 +45,10 @@
               <h4>Lägsta Temperatur</h4>
               <p></p>
             </div>
-          </article>
-          <article id="moons">
-            <div id="moon"></div>
-            <button>Gå tillbaka</button>
+          <div id="moons">
+            <h4>Månar</h4>
+            <p></p>
+            <button onclick="window.location.reload()">Gå tillbaka</button>
           </article>
         </content>
       </section>
