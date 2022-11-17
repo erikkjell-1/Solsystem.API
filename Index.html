@@ -9,25 +9,47 @@
 </head>
 <body>
     
-        <h1>Solsystemet</h1>
-        <h2>Solaris</h2>
-
-    <ul class="solar-system">
-        <li class="sun" ></li>
-        <li class="mercury" ></li>
-        <li class="venus" ></li>
-
-        <li class="earth"></li>
-        <li class="mars"></li>
-        <li class="jupiter"></li>
-
-        <li class="saturn"></li>
-        <li class="neptun"></li>
-        <li class="pluto"></li>
-    </ul>
-
-    <div id="overlay" onclick="off()"></div>
-
+    <main id="planets">
+        <article id="sun"></article>
+        <article id="mercury"></article>
+        <article id="venus"></article>
+        <article id="earth"></article>
+        <article id="mars"></article>
+        <article id="jupiter"></article>
+        <article id="saturn"><aside id="saturn-circle"></aside></article>
+        <article id="uranus"></article>
+        <article id="neptune"></article>
+      </main>
+      
+      <section id="slider">
+        <content>
+          <h2></h2>
+          <h3></h3>
+          <p></p>
+          <article id="info-container">
+            <div id="circumference">
+              <h4>Omkrets</h4>
+              <p></p>
+            </div>
+            <div id="km-from-sun">
+              <h4>Avstånd från solen</h4>
+              <p></p>
+            </div>
+            <div id="max-temp">
+              <h4>Högsta temperatur</h4>
+              <p></p>
+            </div>
+            <div id="min-temp">
+              <h4>Lägsta Temperatur</h4>
+              <p></p>
+            </div>
+          </article>
+          <article id="moons">
+            <div id="moon"></div>
+            <button>Gå tillbaka</button>
+          </article>
+        </content>
+      </section>
 
     
     <script src="Script.js"></script>

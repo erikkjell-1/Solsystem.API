@@ -1,35 +1,50 @@
-const BASE_URL = 'https://fathomless-shelf-54969.herokuapp.com';
-// API nyckel att använda ifall man enbart siktar på godkänt: solaris-vKkkQHqQboi7c6JF
+const base = 'https://fathomless-shelf-54969.herokuapp.com';
 
 
-async function getKey() {
-    const response = await fetch(`${BASE_URL}/keys`, { method: 'POST' });
-    const data = await response.json();
-    console.log(data);
-}
-
-getKey();
-
-// få den hämtade nyckeln in i funktionen under
+function getPlanetIndex() {
+    switch (planetIndex) {
+      case "sun":
+        planetIndex = 0;
+        break;
+      case "mercury":
+        planetIndex = 1;
+        break;
+      case "venus":
+        planetIndex = 2;
+        break;
+      case "earth":
+        planetIndex = 3;
+        break;
+      case "mars":
+        planetIndex = 4;
+        break;
+      case "jupiter":
+        planetIndex = 5;
+        break;
+      case "saturn":
+        planetIndex = 6;
+        break;
+      case "uranus":
+        planetIndex = 7;
+        break;
+      case "neptune":
+        planetIndex = 8;
+        break;
+    }
+  }
 
 async function getPlanets() {
-    const response = await fetch(`${BASE_URL}/bodies`, {
+    let newKey = await getKey();
+    console.log(newKey);
+    const response = await fetch(`${base}/bodies`, {
         headers: {
             'x-zocom': 'solaris-vKkkQHqQboi7c6JF'
         }
     });
-    const data = await response.json();
-    console.log(data);
+    data = await response.json();
+    getPlanetIndex();
+    
 }
+getPlanets(); 
 
-getPlanets();   
 
-// Sedan koppla varsin planet med en eventlistener som printar ut information i overlay
-
-//    function on() {
-//      document.getElementById("overlay").style.display = "block";
-//    }
-
-//    function off() {
-//     document.getElementById("overlay").style.display = "none";
-//    }
