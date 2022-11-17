@@ -12,28 +12,19 @@ async function getPlanets() {
     data = await response.json();
     getPlanetIndex();
 console.log(data);
-    let maxLengthOfParagraph = 1000;
   
   document.querySelector("#overlay h2").innerText =
   data.bodies[planetIndex].name;
 
-  
   document.querySelector("#overlay h4").innerText =
     data.bodies[planetIndex].latinName;
 
-  // description.
-  if (data.bodies[planetIndex].desc.length < maxLengthOfParagraph) {
     document.querySelector("#overlay p").innerText =
       data.bodies[planetIndex].desc;
-    document.querySelector("#overlay p").style.fontSize = "15px";
-  } else {
-    document.querySelector("#overlay p").innerText =
-      data.bodies[planetIndex].desc;
-    document.querySelector("#overlay p").style.fontSize = "14px";
+    document.querySelector("#overlay p").style.fontSize = "2rem";
     document.querySelector("#overlay").style.marginTop = "1rem";
   }
 
-  // circumference
   document.querySelector("#circumference p").innerText =
     data.bodies[planetIndex].circumference;
 
