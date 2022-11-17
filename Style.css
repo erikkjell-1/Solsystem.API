@@ -136,7 +136,7 @@ background-color: #888888;
     display: grid;
     grid-template-columns: 1fr 1fr;
     margin: 1rem 0;
-    border-bottom: 1px solid rgba(128, 128, 128, 0.349);
+    border-bottom: 1px solid rgb(0, 0, 0);
   }
   
   #info-container p {
@@ -156,17 +156,13 @@ background-color: #888888;
   }
   
   #moons button {
-    background-color: black;
+    background-image: linear-gradient(to right,#0C164D, #190B22);
     color: white;
+    font-size: larger;
     cursor: pointer;
-    box-shadow: 0 0 2px white;
     width: 10rem;
     margin-left: auto;
     border-radius: 3px;
+    box-shadow: #190B22;
   }
   
-  #moons button:hover {
-    box-shadow: 0 0 3px white;
-    text-shadow: 0 0 3px white;
-    background-color: rgb(10, 10, 10);
-  }
