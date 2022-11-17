@@ -131,14 +131,8 @@ background-color: #888888;
     align-self: flex-start;
     color: #a68931;
   }
-  
-  #overlay p:nth-child(3) {
-    padding: 1.5rem 0;
-    border-bottom: 1px solid rgba(128, 128, 128, 0.349);
-  }
-  
+
   #info-container {
-    /* border: 1px dotted blue; */
     display: grid;
     grid-template-columns: 1fr 1fr;
     margin: 1rem 0;
