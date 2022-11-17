@@ -7,46 +7,9 @@ async function getPlanets() {
         headers: {
             'x-zocom': 'solaris-vKkkQHqQboi7c6JF',
         }
-    });
-
+    })  
     data = await response.json();
-    getPlanetIndex();
-console.log(data);
-  
-  document.querySelector("#overlay h2").innerText =
-  data.bodies[planetIndex].name;
-
-  document.querySelector("#overlay h4").innerText =
-    data.bodies[planetIndex].latinName;
-
-    document.querySelector("#overlay p").innerText =
-      data.bodies[planetIndex].desc;
-    document.querySelector("#overlay p").style.fontSize = "2rem";
-    document.querySelector("#overlay").style.marginTop = "1rem";
-  }
-
-  document.querySelector("#circumference p").innerText =
-    data.bodies[planetIndex].circumference;
-
-  document.querySelector(
-    "#km-from-sun p"
-  ).innerText = `${data.bodies[planetIndex].distance} km`;
-
-  document.querySelector(
-    "#max-temp p"
-  ).innerText = `${data.bodies[planetIndex].temp.day} °`;
-
-  document.querySelector(
-    "#min-temp p"
-  ).innerText = `${data.bodies[planetIndex].temp.night} °`;
-
-  if (data.bodies[planetIndex].moons.length > 0) {
-    let moons = document.querySelector("#moons");
-    moons.innerHTML = `
-    <h4>Månar</h4>
-    <p>${data.bodies[planetIndex].moons}</p>
-    `;
-  }
+    console.log(data);
 };
 
 
@@ -55,7 +18,7 @@ planets.forEach((planet) => {
     planetIndex = planet.id;
     getPlanets(planetIndex);
     toggleOverlay();
-  });
+  })
 });
 
 function toggleOverlay() {
