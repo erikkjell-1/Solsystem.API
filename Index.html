@@ -8,54 +8,59 @@
     <title>Document</title>
 </head>
 <body>
-    
+
+  <header id="headers">
+  <h1>Solsystemet</h1>
+  <br>
+  <h1>Solaris</h1>
+  </header>
+
     <main id="solar-system">
-        <article class="sun"></article>
-        <article class="mercury"></article>
-        <article class="venus"></article>
+        <article class="sun" onclick="getPlanetInfo(0);"></article>
+        <article class="mercury" onclick="getPlanetInfo(1);"></article>
+        <article class="venus" onclick="getPlanetInfo(2);"></article>
 
-        <article class="earth"></article>
-        <article class="mars"></article>
-        <article class="jupiter"></article>
+        <article class="earth" onclick="getPlanetInfo(3);"></article>
+        <article class="mars" onclick="getPlanetInfo(4);"></article>
+        <article class="jupiter" onclick="getPlanetInfo(5);"></article>
 
-        <article class="saturn">
-          <aside id="saturn-circle"></aside>
-        </article>
-        <article class="uranus"></article>
-        <article class="neptune"></article>
-      </main>
-      
-      <section id="overlay">
+        <article class="saturn" onclick="getPlanetInfo(6);"></article>
+        <article class="uranus" onclick="getPlanetInfo(7);"></article>
+        <article class="neptune" onclick="getPlanetInfo(8);"></article>
+    </main>
+
+    <section class="overlay">
         <content>
-          <h2></h2>
-          <h3></h3>
-          <p></p>
-          <article id="info-container">
-            <div id="circumference">
-              <h4>Omkrets</h4>
-              <p></p>
-            </div>
-            <div id="km-from-sun">
-              <h4>Avstånd från solen</h4>
-              <p></p>
-            </div>
-            <div id="max-temp">
-              <h4>Högsta temperatur</h4>
-              <p></p>
-            </div>
-            <div id="min-temp">
-              <h4>Lägsta Temperatur</h4>
-              <p></p>
-            </div>
-          <div id="moons">
-            <h4>Månar</h4>
-            <p></p>
-            <button onclick="window.location.reload()">Gå tillbaka</button>
-          </article>
+            <h2 id="planet-name"></h2>
+            <h3 id="latin-name"></h3>
+            <p id="pdesc"></p>
+            <article id="info-container">
+                <div id="circumference">
+                    <h4>Omkrets</h4>
+                    <p id="pCircumference"></p>
+                </div>
+                <div id="km-from-sun">
+                    <h4>Avstånd från solen</h4>
+                    <p id="pDistance"></p>
+                </div>
+                <div id="max-temp">
+                    <h4>Högsta temperatur</h4>
+                    <p id="pTempDay"></p>
+                </div>
+                <div id="min-temp">
+                    <h4>Lägsta Temperatur</h4>
+                    <p id="pTempNight"></p>
+                </div>
+                <div id="moons">
+                    <h4>Månar</h4>
+                    <p id="pMoons"></p>
+                </div>
+                <button onclick="window.location.reload()">Gå tillbaka</button>
+            </article>
         </content>
-      </section>
+    </section>
 
-    
+
     <script src="Script.js"></script>
 
 </body>

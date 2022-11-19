@@ -13,6 +13,11 @@ body{
     overflow: hidden;
 }
 
+#headers {
+    color: #C7AA72;
+    padding: 2rem;
+}
+
 #solar-system {
     display: flex;
     flex: auto;
@@ -31,6 +36,7 @@ width: 250px;
 background-color: #FFD029;
 border-bottom-right-radius: 250px;
 border-top-right-radius: 250px;
+box-shadow: red 10px;
 }
 
 .mercury {
@@ -91,7 +97,7 @@ background-color: #888888;
 
 
 /* Overlay */
-#overlay {
+.overlay {
     color: white;
     position: absolute;
     height: 100vh;
@@ -101,61 +107,18 @@ background-color: #888888;
     justify-content: center;
     align-items: center;
     transform: translateY(100%);
-    transition: all 0.3s ease;
+    transition: all 0.5s ease;
     z-index: 1;
     flex-direction: column;
     padding: 7rem;
   }
   
-  #overlay.show {
+  .overlay.show {
     transform: translateY(0);
     background-image: linear-gradient(to right,#0C164D, #190B22);
   }
   
-  #overlay h4 {
-    margin-bottom: 0.3rem;
-    font-size: 1.1rem;
-  }
-  
-  content {
-    max-width: 40rem;
-  }
-  
-  content h2 {
-    font-size: 3rem;
-    align-self: flex-start;
-  }
-  
-  content h4 {
-    font-size: 2rem;
-    align-self: flex-start;
-    color: #a68931;
-  }
-
-  #info-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    margin: 1rem 0;
-    border-bottom: 1px solid rgb(0, 0, 0);
-  }
-  
-  #info-container p {
-    padding-bottom: 1rem;
-  }
-  
-  #moons {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    /* border: 2px dotted yellow; */
-    min-height: 3rem;
-  }
-  
-  #moons p {
-    overflow-y: auto;
-    width: 20rem;
-  }
-  
-  #moons button {
+  .overlay button {
     background-image: linear-gradient(to right,#0C164D, #190B22);
     color: white;
     font-size: larger;

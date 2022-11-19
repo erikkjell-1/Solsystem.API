@@ -1,39 +1,33 @@
 const base = 'https://fathomless-shelf-54969.herokuapp.com';
-const planets = document.querySelectorAll('#solar-system');
+const overlay = document.querySelector('.overlay');
+//const planets = document.querySelectorAll('#solar-system');
 
-const sun = document.querySelector('.sun');
-const mercury = document.querySelector('.mercury');
-const venus = document.querySelector('.venus');
-
-const earth = document.querySelector('.earth');
-const mars = document.querySelector('.mars');
-const jupiter = document.querySelector('.jupiter');
-
-const saturn = document.querySelector('.saturn');
-const uranus = document.querySelector('.uranus');
-const neptune = document.querySelector('.neptune');
-
-async function getPlanets() {
+async function getPlanets(planetId) {
     const response = await fetch(`${base}/bodies/`, {
         headers: {
             'x-zocom': 'solaris-vKkkQHqQboi7c6JF',
         }
-    })  
+    })
     data = await response.json();
-    console.log(data);
+
+    document.getElementById("planet-name").innerHTML = data.bodies[planetId].name;
+    document.getElementById("latin-name").innerHTML = data.bodies[planetId].latinName;
+    document.getElementById("pdesc").innerHTML = data.bodies[planetId].desc;
+    document.getElementById("pCircumference").innerHTML = data.bodies[planetId].circumference;
+    document.getElementById("pDistance").innerHTML = data.bodies[planetId].distance;
+    document.getElementById("pTempDay").innerHTML = data.bodies[planetId].temp.day;
+    document.getElementById("pTempNight").innerHTML = data.bodies[planetId].temp.night;
+    document.getElementById("pMoons").innerHTML = data.bodies[planetId].moons.length;
+
+    //console.log(data);
 };
 
 
-
-
-planets.forEach((planet) => {
-  planet.addEventListener("click", () => {
-    planetIndex = planet.id;
-    getPlanets(planetIndex);
+function getPlanetInfo(planetId) {
+    getPlanets(planetId);
     toggleOverlay();
-  })
-});
+}
 
 function toggleOverlay() {
-  overlay.classList.toggle("show");
+    overlay.classList.toggle("show");
 }
